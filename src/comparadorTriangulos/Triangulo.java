@@ -27,8 +27,8 @@ public class Triangulo {
 	public String[] devolverTipo(){
 		//Primer valor para ver su tipo dependiendo de sus lados y el segundo depende de sus ángulos.
 		String tipos[] = new String[2];
-		tipos[0] = clasificarLado();
-		tipos[1] = clasificarAngulo();
+		tipos[0] = clasificarAngulo();
+		tipos[1] = clasificarLado();
 		return tipos;	
 	}
 	public String clasificarLado(){
