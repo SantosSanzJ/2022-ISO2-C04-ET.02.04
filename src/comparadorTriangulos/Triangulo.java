@@ -11,6 +11,9 @@ public class Triangulo {
 	private double lados[] = new double[3];
 	private double angulos[] = new double[3]; 
 	public Triangulo(double[] lados, double[] angulos){
+		// Para formar un triangulo importan las posiciones por lo que asumiremos:
+		// lados[0] es el lado a, angulos[0] es alfa, lados[1] es el lado b, 
+		// angulos[1] es beta, lados[2] es el lado c, angulos[2] es ganma
 		this.lados = lados;
 		this.angulos = angulos;
 		this.tipos = devolverTipo();
@@ -54,12 +57,34 @@ public class Triangulo {
 
 	public String clasificarAngulo() {
 		String tipoAngulo = new String();
-		double total = 0;
 		double anguloMayor = 0.0;
+		String verificado;
+
+		verificado = verificarTriangulo();
+		
+		if (verificado!=null){
+			return verificado;
+		}
+
+		for(int i = 0; i < 3; i++) {
+			if (this.angulos[i] > anguloMayor) anguloMayor = this.angulos[i];
+		}
+
+		if(anguloMayor > ANGULORECTO + MARGENERROR){
+			tipoAngulo = "Obtusángulo";
+		}else if(anguloMayor > ANGULORECTO - MARGENERROR){
+			tipoAngulo = "Recto";
+		}else {
+			tipoAngulo = "Acutángulo";
+		}			
+		return tipoAngulo;
+	}
+
+	public String verificarTriangulo() {
+		double total = 0;
 		try {
 			for(int i = 0; i < 3; i++) {
 				total += this.angulos[i];
-				if (this.angulos[i] > anguloMayor) anguloMayor = this.angulos[i];
 				if(this.angulos[i] <= 0) throw new AnguloInvalidoException("El ángulo es menor o igual a 0."); 
 			}
 		}catch(AnguloInvalidoException e) {
@@ -73,13 +98,14 @@ public class Triangulo {
 			System.out.println(e.getMessage());
 			return "Error Suma Angulos Invalidos";
 		}
-		if(anguloMayor > ANGULORECTO + MARGENERROR){
-			tipoAngulo = "Obtusángulo";
-		}else if(anguloMayor > ANGULORECTO - MARGENERROR){
-			tipoAngulo = "Recto";
-		}else {
-			tipoAngulo = "Acutángulo";
-		}			
-		return tipoAngulo;
+		try {
+			if(!((this.lados[0]/Math.sin(this.angulos[0]))==(this.lados[1]/Math.sin(this.angulos[1]))&&(this.lados[1]/Math.sin(this.angulos[1]))==(this.lados[0]/Math.sin(this.angulos[1])))) {
+				throw new TrianguloImposibleException("El triángulo no cumple el teorema del seno");
+			}
+		}catch(TrianguloImposibleException e) {
+			System.out.println(e.getMessage());
+			return "Error Triángulo imposible";
+		}
+		return null;
 	}
 }
