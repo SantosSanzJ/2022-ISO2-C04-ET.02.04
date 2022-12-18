@@ -10,13 +10,23 @@ public class Triangulo {
 	String tipos[] = new String[2];
 	private double lados[] = new double[3];
 	private double angulos[] = new double[3]; 
+	String trianguloValido;
+
 	public Triangulo(double[] lados, double[] angulos){
 		// Para formar un triangulo importan las posiciones por lo que asumiremos:
 		// lados[0] es el lado a, angulos[0] es alfa, lados[1] es el lado b, 
 		// angulos[1] es beta, lados[2] es el lado c, angulos[2] es ganma
 		this.lados = lados;
 		this.angulos = angulos;
-		this.tipos = devolverTipo();
+		this.trianguloValido = verificarTriangulo();
+		// Si no es válido el triángulo, no puede ser de un tipo
+		if (trianguloValido == "Triángulo Válido"){
+			this.tipos = devolverTipo();
+		} else {
+			tipos[0] = "Triángulo imposible";
+			tipos[1] = "Triángulo imposible";
+		}
+		
 	}
 	
 	public double[] getLados() {
@@ -58,13 +68,6 @@ public class Triangulo {
 	public String clasificarAngulo() {
 		String tipoAngulo = new String();
 		double anguloMayor = 0.0;
-		String verificado;
-
-		verificado = verificarTriangulo();
-		
-		if (verificado!=null){
-			return verificado;
-		}
 
 		for(int i = 0; i < 3; i++) {
 			if (this.angulos[i] > anguloMayor) anguloMayor = this.angulos[i];
@@ -106,6 +109,6 @@ public class Triangulo {
 			System.out.println(e.getMessage());
 			return "Error Triángulo imposible";
 		}
-		return null;
+		return "Triángulo Válido";
 	}
 }
