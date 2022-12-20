@@ -8,7 +8,7 @@ o letras se tiene que lanzar una excepción que indique esta situación.
 
 public class main {
 	public static void main(String[] args) {
-		double lados[] = {24.00,24.00,24.00};
+		double lados[] = {10.00,10.00,10.00};
 		double angulos[] = {60.00,60.00,60.00};
 		crearTriangulo(lados,angulos);
 	}

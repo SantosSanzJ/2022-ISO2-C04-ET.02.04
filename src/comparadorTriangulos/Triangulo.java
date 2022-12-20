@@ -1,5 +1,7 @@
 package comparadorTriangulos;
 
+import javax.print.event.PrintEvent;
+
 public class Triangulo {
 	//Declaramos las variables para evitar los "números mágicos".
 	static final double ANGULOTOTAL = 180.0;
@@ -10,7 +12,6 @@ public class Triangulo {
 	String tipos[] = new String[2];
 	private double lados[] = new double[3];
 	private double angulos[] = new double[3]; 
-	String trianguloValido;
 
 	public Triangulo(double[] lados, double[] angulos){
 		// Para formar un triangulo importan las posiciones por lo que asumiremos:
@@ -18,15 +19,7 @@ public class Triangulo {
 		// angulos[1] es beta, lados[2] es el lado c, angulos[2] es ganma
 		this.lados = lados;
 		this.angulos = angulos;
-		this.trianguloValido = verificarTriangulo();
-		// Si no es válido el triángulo, no puede ser de un tipo
-		if (trianguloValido == "Triángulo Válido"){
-			this.tipos = devolverTipo();
-		} else {
-			tipos[0] = "Triángulo imposible";
-			tipos[1] = "Triángulo imposible";
-		}
-		
+		this.tipos = devolverTipo();
 	}
 	
 	public double[] getLados() {
@@ -40,20 +33,23 @@ public class Triangulo {
 	public String[] devolverTipo(){
 		//Primer valor para ver su tipo dependiendo de sus lados y el segundo depende de sus ángulos.
 		String tipos[] = new String[2];
-		tipos[0] = clasificarAngulo();
-		tipos[1] = clasificarLado();
+		String trianguloValido = verificarTriangulo();
+
+		// Si no es válido el triángulo, no puede ser de un tipo
+		if (trianguloValido == "Triángulo Válido"){
+			tipos[0] = clasificarAngulo();
+			tipos[1] = clasificarLado();
+		} else {
+			tipos[0] = "Triángulo imposible";
+			tipos[1] = "Triángulo imposible";
+		}
+
 		return tipos;	
 	}
 	public String clasificarLado(){
 		//Lanzar excepción si la raiz de los catetos al cuadrado es diferente de la hipotenusa.
 		String tipoLado = new String();
-		try {
-			for(int i = 0; i < 3; i++) {
-				if(this.lados[i] <= 0) throw new LadoInvalidoException("Existe un lado que es menor o igual a 0."); 
-			}
-		}catch(LadoInvalidoException e){
-			System.out.println(e.getMessage());
-		}
+
 		if(this.lados[0] == this.lados[1] && this.lados[0] == this.lados[2]) {
 			tipoLado = "Equilátero";
 		}else if(this.lados[0] == this.lados[1] || this.lados[0] == this.lados[2] ||
@@ -85,6 +81,14 @@ public class Triangulo {
 
 	public String verificarTriangulo() {
 		double total = 0;
+		try {
+			for(int i = 0; i < 3; i++) {
+				if(this.lados[i] <= 0) throw new LadoInvalidoException("Existe un lado que es menor o igual a 0."); 
+			}
+		}catch(LadoInvalidoException e){
+			System.out.println(e.getMessage());
+			return "Error Lado Invalido";
+		}
 		try {
 			for(int i = 0; i < 3; i++) {
 				total += this.angulos[i];
