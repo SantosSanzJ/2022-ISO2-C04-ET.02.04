@@ -120,18 +120,27 @@ public class Triangulo {
 	}
 
 	public boolean verificarTrianguloTeoremaSeno() {
+		//El teorema del seno es la mejor forma de verificar si un triángulo es posible o no
+		//Para poder hacerlo usando estimaciones es necesario sacar valores inferiores y superiores
+		//y ver si el valor está entre estos. El valor varía mucho en función de la cercanía/lejanía 
+		//con respecto a pi/2 o 90º, por lo que el margen de error en algunas ocasiones es demasiado
+		//y en otras demasiado poco.
 		double angulosTruncados[] = new double[3];
 		double constante[] = new double[3];
 		double teoremaSenoExtremos[][] = new double[3][2];
 		boolean valido = true;
 
+		//Primero truncamos el valor de los angulos a 2 decimales que es sobre lo que trabajaremos
 		for (int i = 0; i < 3; i++) {
 			angulosTruncados[i] = Math.round(this.angulos[i]*100);
 			angulosTruncados[i] = angulosTruncados[i]/100;
 		}
+		//Calculamos el teorema del seno correspondiente a cada lado/ángulo
 		for (int i = 0; i < 3; i++) {
 			constante[i] = this.lados[i]/Math.sin(Math.toRadians(this.angulos[i]));
 		}
+		//Calculamos los valores extremos para poder estimar, como en 90º está el extremo de la función
+		//el menor/mayor cambiará en función del grado
 		for (int i = 0; i < 3; i++) {
 			if(angulosTruncados[i] >= 90.00) {
 				if ((angulosTruncados[i]-MARGENERROR)<90.00) {
@@ -149,6 +158,8 @@ public class Triangulo {
 				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])-MARGENERROR);
 			}
 		}
+		//Finalmente, se realiza la comparación, en caso de que algún valor no coincida se evaluará en falso
+		//También se usa el calcular el módulo junto con sumar 1 y 2 para poder aplicarlo sin tener en cuenta el valor de i.
 		for (int i = 0; i < 3; i++) {
 			if (!(((constante[i]>teoremaSenoExtremos[(i+1)%3][0]) && (constante[i]>teoremaSenoExtremos[(i+2)%3][0]))
 			&& ((constante[i]<teoremaSenoExtremos[(i+1)%3][1]) && (constante[i]<teoremaSenoExtremos[(i+2)%3][1])))) {
