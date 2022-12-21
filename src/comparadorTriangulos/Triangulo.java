@@ -6,12 +6,13 @@ public class Triangulo {
 	//Declaramos las variables para evitar los "números mágicos".
 	static final double ANGULOTOTAL = 180.0;
 	static final double ANGULORECTO = 90.0;
-	static final double MARGENERROR = 0.01;
+	static final double MARGENERROR = 0.1;
 	//Dentro de la definición de requisitos, los triángulos pueden ser incorrectos
 	//o imposibles donde de verdad sabremos si lo que hacen es correcto es en el método a implementar.
 	String tipos[] = new String[2];
 	private double lados[] = new double[3];
 	private double angulos[] = new double[3]; 
+	//this.angulos[1]=Math.trunc(this.angulos[1]);
 
 	public Triangulo(double[] lados, double[] angulos){
 		// Para formar un triangulo importan las posiciones por lo que asumiremos:
@@ -81,6 +82,7 @@ public class Triangulo {
 
 	public String verificarTriangulo() {
 		double total = 0;
+
 		try {
 			for(int i = 0; i < 3; i++) {
 				if(this.lados[i] <= 0) throw new LadoInvalidoException("Existe un lado que es menor o igual a 0."); 
@@ -105,8 +107,9 @@ public class Triangulo {
 			System.out.println(e.getMessage());
 			return "Error Suma Angulos Invalidos";
 		}
+
 		try {
-			if(!((this.lados[0]/Math.sin(this.angulos[0]))==(this.lados[1]/Math.sin(this.angulos[1]))&&(this.lados[1]/Math.sin(this.angulos[1]))==(this.lados[0]/Math.sin(this.angulos[1])))) {
+			if(!(verificarTrianguloTeoremaSeno())) {
 				throw new TrianguloImposibleException("El triángulo no cumple el teorema del seno");
 			}
 		}catch(TrianguloImposibleException e) {
@@ -114,5 +117,44 @@ public class Triangulo {
 			return "Error Triángulo imposible";
 		}
 		return "Triángulo Válido";
+	}
+
+	public boolean verificarTrianguloTeoremaSeno() {
+		double angulosTruncados[] = new double[3];
+		double constante[] = new double[3];
+		double teoremaSenoExtremos[][] = new double[3][2];
+		boolean valido = true;
+
+		for (int i = 0; i < 3; i++) {
+			angulosTruncados[i] = Math.round(this.angulos[i]*100);
+			angulosTruncados[i] = angulosTruncados[i]/100;
+		}
+		for (int i = 0; i < 3; i++) {
+			constante[i] = this.lados[i]/Math.sin(Math.toRadians(this.angulos[i]));
+		}
+		for (int i = 0; i < 3; i++) {
+			if(angulosTruncados[i] >= 90.00) {
+				if ((angulosTruncados[i]-MARGENERROR)<90.00) {
+					teoremaSenoExtremos[i][0] = lados[i]-MARGENERROR;
+				}else{
+					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])-MARGENERROR);
+				}
+				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])+MARGENERROR);
+			}else{
+				if ((angulosTruncados[i]+MARGENERROR)>90.00) {
+					teoremaSenoExtremos[i][0] = lados[i]-MARGENERROR;
+				}else{
+					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])+MARGENERROR);
+				}
+				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])-MARGENERROR);
+			}
+		}
+		for (int i = 0; i < 3; i++) {
+			if (!(((constante[i]>teoremaSenoExtremos[(i+1)%3][0]) && (constante[i]>teoremaSenoExtremos[(i+2)%3][0]))
+			&& ((constante[i]<teoremaSenoExtremos[(i+1)%3][1]) && (constante[i]<teoremaSenoExtremos[(i+2)%3][1])))) {
+				valido = false;
+			}
+		}
+		return valido;
 	}
 }
