@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="C04.C04_ISO2_ET02.AppTest" time="0.154" tests="125" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="16"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02\target\test-classes;C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02\target\classes;C:\Users\03961465\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\03961465\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\03961465\.m2\repository\org\jacoco\org.jacoco.agent\0.7.9\org.jacoco.agent-0.7.9-runtime.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="C:\Users\03961465\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\03961465\AppData\Local\Temp\surefire9290964998305157312\surefirebooter7788200400915449516.jar C:\Users\03961465\AppData\Local\Temp\surefire9290964998305157312 2022-12-22T23-47-00_358-jvmRun1 surefire2011703657593617327tmp surefire_02481262521375812158tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02\target\test-classes;C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02\target\classes;C:\Users\03961465\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\03961465\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\03961465\.m2\repository\org\jacoco\org.jacoco.agent\0.7.9\org.jacoco.agent-0.7.9-runtime.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\03961465"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.home" value="C:\Users\03961465\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\03961465\AppData\Local\Temp\surefire9290964998305157312\surefirebooter7788200400915449516.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="16.0.2+7-67"/>
+    <property name="user.name" value="03961465"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\03961465\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\03961465\AppData\Local\Temp\"/>
+    <property name="java.version" value="16.0.2"/>
+    <property name="user.dir" value="C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\03961465\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/03961465/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149/jre/bin/server;C:/Users/03961465/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149/jre/bin;C:\Program Files (x86)\Intel\oneAPI\tbb\latest\redist\intel64\vc_mt\;C:\Program Files (x86)\Intel\oneAPI\tbb\latest\redist\ia32\vc_mt\;C:\Program Files (x86)\Intel\oneAPI\compiler\latest\windows\redist\intel64_win\compiler;C:\Program Files (x86)\Intel\oneAPI\compiler\latest\windows\redist\ia32_win\compiler;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Eclipse Foundation\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2020.3.1\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Users\03961465\AppData\Local\Programs\Python\Python38\;C:\Users\03961465\AppData\Local\Programs\Python\Python38\Scripts\;C:\Program Files\kotlinc\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\03961465\AppData\Local\Programs\Python\Launcher\;C:\Users\03961465\.cargo\bin;C:\Users\03961465\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\03961465\AppData\Local\Programs\Python\Python39\;C:\Users\03961465\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.2\bin;;C:\Users\03961465\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\03961465\AppData\Local\Programs\Python\Python38;C:\Users\03961465\AppData\Local\Programs\Python\Python38\Scripts\;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Users\03961465\.dotnet\tools;C:\Users\03961465\go\bin;C:\Program Files\CMake\bin;C:\Users\03961465\AppData\Local\GitHubDesktop\bin;C:\Program Files\apache-maven-3.8.6\bin;;C:\Users\03961465\eclipse\java-2021-09\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="16.0.2+7-67"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="60.0"/>
+  </properties>
+  <testcase name="testExcepcionNoSuma180" classname="C04.C04_ISO2_ET02.AppTest" time="0.037"/>
+  <testcase name="testC10" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC11" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC12" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC13" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU1" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testEU2" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU3" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testEU4" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU5" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU6" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU7" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testEU8" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU9" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP10" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP11" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP12" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP13" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP14" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP15" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP16" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP17" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP18" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP19" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP20" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP21" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP22" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP23" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP24" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP25" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP26" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP27" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP28" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP29" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP30" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP31" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP32" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP33" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP34" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP35" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP36" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP37" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP38" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP39" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP40" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP41" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP42" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP43" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP44" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP45" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP46" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP47" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP48" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP49" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP50" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP51" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP52" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP53" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP54" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP55" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP56" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP57" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP58" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP59" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP60" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP61" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP62" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP63" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP64" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP65" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP66" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP67" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP68" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP69" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP70" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP71" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP72" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP73" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP74" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP75" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP76" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP77" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP78" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP79" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP80" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP81" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP82" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP83" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP84" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP85" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP86" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP87" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP88" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP89" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP90" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP91" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP92" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP93" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP94" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP95" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP96" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP97" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP98" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP99" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testEU10" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP100" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC4" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC8" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC9" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP1" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP2" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP3" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP4" classname="C04.C04_ISO2_ET02.AppTest" time="0.001"/>
+  <testcase name="testP5" classname="C04.C04_ISO2_ET02.AppTest" time="0.009"/>
+  <testcase name="testP6" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP7" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP8" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testP9" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC2AnguloInvalido" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC1LadoInvalido" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC5AcutanguloEquilatero" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testExcepcionAmbosNegativos" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC3SumaAnguloInvalida" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC7ObtusanguloEscaleno" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+  <testcase name="testC6RectoIsosceles" classname="C04.C04_ISO2_ET02.AppTest" time="0"/>
+</testsuite>
