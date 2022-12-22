@@ -298,7 +298,7 @@ class TrianguloTest {
 	
 	@Test
 	void testP22() {
-		double[] lados = {0.0,1.0,10,0002304};
+		double[] lados = {0.0,1.0,10.0002304};
 		double[] angulos = {180.0,200.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -314,7 +314,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP24() {
-		double[] lados = {0.0,10,0002304,-1.0};
+		double[] lados = {0.0,10.0002304,-1.0};
 		double[] angulos = {200.0,-1.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -331,7 +331,7 @@ class TrianguloTest {
 	@Test
 	void testP26() {
 		double[] lados = {0.0,-1.0,1.0};
-		double[] angulos = {-1.0,1.0,10,0002304};
+		double[] angulos = {-1.0,1.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -347,7 +347,7 @@ class TrianguloTest {
 	@Test
 	void testP28() {
 		double[] lados = {0.0,1.0,-1.0};
-		double[] angulos = {1.0,10,0002304,180.0};
+		double[] angulos = {1.0,10.0002304,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -361,14 +361,14 @@ class TrianguloTest {
 	}@Test
 	void testP30() {
 		double[] lados = {0.0,-1.0,1.0};
-		double[] angulos = {10,0002304,180.0,200.0};
+		double[] angulos = {10.0002304,180.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP31() {
 		double[] lados = {1.0,1.0,-10.0};
-		double[] angulos = {200.0,0.0,10,0002304};
+		double[] angulos = {200.0,0.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -381,7 +381,7 @@ class TrianguloTest {
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP33() {
-		double[] lados = {1.0,10,0002304,0.0};
+		double[] lados = {1.0,10.0002304,0.0};
 		double[] angulos = {-1.0,10.0,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -389,7 +389,7 @@ class TrianguloTest {
 	}@Test
 	void testP34() {
 		double[] lados = {1.0,-10.0,1.0};
-		double[] angulos = {0.0,10,0002304,181.0};
+		double[] angulos = {0.0,10.0002304,181.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -410,7 +410,7 @@ class TrianguloTest {
 	}@Test
 	void testP37() {
 		double[] lados = {1.0,1.0,0.0};
-		double[] angulos = {10,0002304,181.0,-1.0};
+		double[] angulos = {10.0002304,181.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -430,7 +430,7 @@ class TrianguloTest {
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP40() {
-		double[] lados = {1.0,0.0,10,0002304};
+		double[] lados = {1.0,0.0,10.0002304};
 		double[] angulos = {181.0,-1.0,10.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -444,7 +444,7 @@ class TrianguloTest {
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP42() {
-		double[] lados = {10.0,10,0002304,1.0};
+		double[] lados = {10.0,10.0002304,1.0};
 		double[] angulos = {1.0,180.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -459,7 +459,7 @@ class TrianguloTest {
 	}@Test
 	void testP44() {
 		double[] lados = {10.0,-1.0,-1.0};
-		double[] angulos = {10,0002304,200.0,1.0};
+		double[] angulos = {10.0002304,200.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -473,7 +473,7 @@ class TrianguloTest {
 	}@Test
 	void testP46() {
 		double[] lados = {10.0,1.0,1.0};
-		double[] angulos = {180.0,-1.0,10,0002304};
+		double[] angulos = {180.0,-1.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -486,7 +486,7 @@ class TrianguloTest {
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP48() {
-		double[] lados = {10.0,-1.0,10,0002304};
+		double[] lados = {10.0,-1.0,10.0002304};
 		double[] angulos = {200.0,1.0,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -501,76 +501,76 @@ class TrianguloTest {
 	}@Test
 	void testP50() {
 		double[] lados = {10.0,1.0,-1.0};
-		double[] angulos = {-1.0,10,0002304,200.0};
+		double[] angulos = {-1.0,10.0002304,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP51() {
-		double[] lados = {10,0002304,10,0002304,-10.0};
-		double[] angulos = {10,0002304,-10.0,10,0002304};
+		double[] lados = {10.0002304,10.0002304,-10.0};
+		double[] angulos = {10.0002304,-10.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP52() {
-		double[] lados = {10,0002304,-10.0,-1.0};
+		double[] lados = {10.0002304,-10.0,-1.0};
 		double[] angulos = {179.0,-1.0,179.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP53() {
-		double[] lados = {10,0002304,-1.0,0.0};
+		double[] lados = {10.0002304,-1.0,0.0};
 		double[] angulos = {180.0,0.0,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP54() {
-		double[] lados = {10,0002304,0.0,1.0};
+		double[] lados = {10.0002304,0.0,1.0};
 		double[] angulos = {181.0,1.0,181.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP55() {
-		double[] lados = {10,0002304,1.0,10.0};
+		double[] lados = {10.0002304,1.0,10.0};
 		double[] angulos = {200.0,10.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP56() {
-		double[] lados = {10,0002304,-10.0,10,0002304};
-		double[] angulos = {-10.0,10,0002304,-10.0};
+		double[] lados = {10.0002304,-10.0,10.0002304};
+		double[] angulos = {-10.0,10.0002304,-10.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP57() {
-		double[] lados = {10,0002304,-1.0,-10.0};
+		double[] lados = {10.0002304,-1.0,-10.0};
 		double[] angulos = {-1.0,179.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP58() {
-		double[] lados = {10,0002304,0.0,-1.0};
+		double[] lados = {10.0002304,0.0,-1.0};
 		double[] angulos = {0.0,180.0,0.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP59() {
-		double[] lados = {10,0002304,1.0,0.0};
+		double[] lados = {10.0002304,1.0,0.0};
 		double[] angulos = {1.0,181.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP60() {
-		double[] lados = {10,0002304,10.0,1.0};
+		double[] lados = {10.0002304,10.0,1.0};
 		double[] angulos = {10.0,200.0,10.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -585,7 +585,7 @@ class TrianguloTest {
 	}@Test
 	void testP62() {
 		double[] lados = {-10.0,-1.0,1.0};
-		double[] angulos = {200.0,10,0002304,-1.0};
+		double[] angulos = {200.0,10.0002304,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -598,7 +598,7 @@ class TrianguloTest {
 		assertArrayEquals(resultado,t.devolverTipo());
 	}@Test
 	void testP64() {
-		double[] lados = {-10.0,1.0,10,0002304};
+		double[] lados = {-10.0,1.0,10.0002304};
 		double[] angulos = {-1.0,180.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -613,7 +613,7 @@ class TrianguloTest {
 	}@Test
 	void testP66() {
 		double[] lados = {-10.0,-1.0,-1.0};
-		double[] angulos = {1.0,200.0,10,0002304};
+		double[] angulos = {1.0,200.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -628,7 +628,7 @@ class TrianguloTest {
 	@Test
 	void testP68() {
 		double[] lados = {-10.0,1.0,1.0};
-		double[] angulos = {10,0002304,-1.0,180.0};
+		double[] angulos = {10.0002304,-1.0,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -643,7 +643,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP70() {
-		double[] lados = {-10.0,10,0002304,-1.0};
+		double[] lados = {-10.0,10.0002304,-1.0};
 		double[] angulos = {180.0,1.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -652,14 +652,14 @@ class TrianguloTest {
 	@Test
 	void testP71() {
 		double[] lados = {-1.0,-1.0,10.0};
-		double[] angulos = {-1.0,181.0,10,0002304};
+		double[] angulos = {-1.0,181.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}
 	@Test
 	void testP72() {
-		double[] lados = {-1.0,0.0,10,0002304};
+		double[] lados = {-1.0,0.0,10.0002304};
 		double[] angulos = {0.0,200.0,179.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -684,7 +684,7 @@ class TrianguloTest {
 	@Test
 	void testP75() {
 		double[] lados = {-1.0,-1.0,0.0};
-		double[] angulos = {10,0002304,0.0,200.0};
+		double[] angulos = {10.0002304,0.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -708,18 +708,19 @@ class TrianguloTest {
 	@Test
 	void testP78() {
 		double[] lados = {-1.0,10.0,-1.0};
-		double[] angulos = {181.0,10,0002304,0.0};
+		double[] angulos = {181.0,10.0002304,0.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}
 	@Test
 	void testP79() {
-		double[] lados = {-1.0,10,0002304,0.0};
+		double[] lados = {-1.0,10.0002304,0.0};
 		double[] angulos = {200.0,179.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
+	}
 	@Test
 	void testP80() {
 		double[] lados = {-1.0,-10.0,1.0};
@@ -739,7 +740,7 @@ class TrianguloTest {
 	@Test
 	void testP82() {
 		double[] lados = {0.0,1.0,-1.0};
-		double[] angulos = {10,0002304,1.0,-1.0};
+		double[] angulos = {10.0002304,1.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -755,7 +756,7 @@ class TrianguloTest {
 	@Test
 	void testP84() {
 		double[] lados = {0.0,-1.0,1.0};
-		double[] angulos = {180.0,10,0002304,1.0};
+		double[] angulos = {180.0,10.0002304,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -771,7 +772,7 @@ class TrianguloTest {
 	@Test
 	void testP86() {
 		double[] lados = {0.0,1.0,-1.0};
-		double[] angulos = {200.0,180.0,10,0002304};
+		double[] angulos = {200.0,180.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -786,7 +787,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP88() {
-		double[] lados = {0.0,10,0002304,1.0};
+		double[] lados = {0.0,10.0002304,1.0};
 		double[] angulos = {-1.0,200.0,180.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -802,7 +803,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP90() {
-		double[] lados = {0.0,-1.0,10,0002304};
+		double[] lados = {0.0,-1.0,10.0002304};
 		double[] angulos = {1.0,-1.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -811,7 +812,7 @@ class TrianguloTest {
 	@Test
 	void testP91() {
 		double[] lados = {1.0,1.0,0.0};
-		double[] angulos = {180.0,179.0,10,0002304};
+		double[] angulos = {180.0,179.0,10.0002304};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -858,7 +859,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP97() {
-		double[] lados = {1.0,10,0002304,10.0};
+		double[] lados = {1.0,10.0002304,10.0};
 		double[] angulos = {1.0,0.0,-1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -866,7 +867,7 @@ class TrianguloTest {
 	}
 	@Test
 	void testP98() {
-		double[] lados = {1.0,-10.0,10,0002304};
+		double[] lados = {1.0,-10.0,10.0002304};
 		double[] angulos = {10.0,1.0,0.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
@@ -875,7 +876,7 @@ class TrianguloTest {
 	@Test
 	void testP99() {
 		double[] lados = {1.0,-1.0,-10.0};
-		double[] angulos = {10,0002304,10.0,1.0};
+		double[] angulos = {10.0002304,10.0,1.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
@@ -883,7 +884,88 @@ class TrianguloTest {
 	@Test
 	void testP100() {
 		double[] lados = {1.0,0.0,-1.0};
-		double[] angulos = {179.0,10,0002304,10.0};
+		double[] angulos = {179.0,10.0002304,10.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	//Empieza los casos de prueba each use los enumeraremos como EU1...EU10
+	@Test
+	void testEU1() {
+		double[] lados = {-10.0,-10.0,-10.0};
+		double[] angulos = {-10.0,-10.0,-10.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU2() {
+		double[] lados = {-1.0,-1.0,-1.0};
+		double[] angulos = {-1.0,-1.0,-1.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU3() {
+		double[] lados = {0.0,0.0,0.0};
+		double[] angulos = {0.0,0.0,0.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU4() {
+		double[] lados = {1.0,1.0,1.0};
+		double[] angulos = {1.0,1.0,1.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU5() {
+		double[] lados = {10.0,10.0,10.0};
+		double[] angulos = {10.0,10.0,10.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU6() {
+		double[] lados = {10.0002304,10.0002304,10.0002304};
+		double[] angulos = {10.0002304,10.0002304,10.0002304};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU7() {
+		double[] lados = {10.0,10.0,10.0};
+		double[] angulos = {179.0,179.0,179.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU8() {
+		double[] lados = {10.0,10.0,10.0};
+		double[] angulos = {180.0,180.0,180.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU9() {
+		double[] lados = {10.0,10.0,10.0};
+		double[] angulos = {181.0,181.0,181.0};
+		Triangulo t = new Triangulo (lados,angulos);
+		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
+		assertArrayEquals(resultado,t.devolverTipo());
+	}
+	@Test
+	void testEU10() {
+		double[] lados = {10.0,10.0,10.0};
+		double[] angulos = {200.0,200.0,200.0};
 		Triangulo t = new Triangulo (lados,angulos);
 		String[] resultado = {"Triángulo imposible","Triángulo imposible"};
 		assertArrayEquals(resultado,t.devolverTipo());
