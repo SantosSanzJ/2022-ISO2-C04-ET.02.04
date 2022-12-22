@@ -9,11 +9,11 @@ o letras se tiene que lanzar una excepción que indique esta situación.
 //{4.00,3.00,5.00}{53.13,36.87,90.00}
 //{14.14,10.00,10.00}{90.00,45.00,45.00}
 //{13.02,18.16,24.32}{31.67,47.09,101.24}
-//{10.00,10.00,10.00}{60.00,60.00,60.00}
+//{20.00,20.00,20.00}{60.00,60.00,60.00}
 public class main {
 	public static void main(String[] args) {
-		double lados[] = {14.14,10.00,10.00};
-		double angulos[] = {90.00,45.00,45.00};
+		double lados[] = {10.00,14.14,10.00};
+		double angulos[] = {45.00,90.00,45.00};
 		crearTriangulo(lados,angulos);
 	}
 	public static void crearTriangulo(double lados[], double angulos[]){
