@@ -50,10 +50,6 @@ public class Triangulo {
 	public String clasificarLado(){
 		//Lanzar excepción si la raiz de los catetos al cuadrado es diferente de la hipotenusa.
 		String tipoLado = new String();
-		System.out.println("Lados");
-		System.out.println(this.lados[0] == this.lados[1]);
-		System.out.println(this.lados[0] == this.lados[2]);
-		System.out.println(this.lados[1] == this.lados[2]);
 		if(this.lados[0] == this.lados[1] && this.lados[0] == this.lados[2]) {
 			tipoLado = "Equilátero";
 		}else if(this.lados[0] == this.lados[1] || this.lados[0] == this.lados[2] ||
@@ -104,9 +100,6 @@ public class Triangulo {
 			return "Error Angulo Invalido";
 		}
 		try {
-			System.out.println("Verificar Angulo");
-			System.out.println(total  - ANGULOTOTAL > MARGENERROR);
-			System.out.println(total - ANGULOTOTAL < -MARGENERROR);
 			if(total  - ANGULOTOTAL > MARGENERROR || total - ANGULOTOTAL < -MARGENERROR) 
 				throw new SumaAnguloInvalidaException("El triángulo no suma 180º.");
 		}catch(SumaAnguloInvalidaException e) {
@@ -167,11 +160,6 @@ public class Triangulo {
 		//Finalmente, se realiza la comparación, en caso de que algún valor no coincida se evaluará en falso
 		//También se usa el calcular el módulo junto con sumar 1 y 2 para poder aplicarlo sin tener en cuenta el valor de i.
 		for (int i = 0; i < 3; i++) {
-			System.out.println(i);
-			System.out.println("Seno a "+(constante[i]>teoremaSenoExtremos[(i+1)%3][0])+".");
-			System.out.println("Seno b "+(constante[i]>teoremaSenoExtremos[(i+2)%3][0])+".");
-			System.out.println("Seno c "+(constante[i]<teoremaSenoExtremos[(i+1)%3][1])+".");
-			System.out.println("Seno d "+(constante[i]<teoremaSenoExtremos[(i+2)%3][1])+".");
 			if (!(((constante[i]>teoremaSenoExtremos[(i+1)%3][0]) && (constante[i]>teoremaSenoExtremos[(i+2)%3][0]))
 			&& ((constante[i]<teoremaSenoExtremos[(i+1)%3][1]) && (constante[i]<teoremaSenoExtremos[(i+2)%3][1])))) {
 				valido = false;
