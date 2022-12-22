@@ -23,14 +23,6 @@ public class Triangulo {
 		this.tipos = devolverTipo();
 	}
 	
-	public double[] getLados() {
-		return lados;
-	}
-
-	public double[] getAngulos() {
-		return angulos;
-	}
-	
 	public String[] devolverTipo(){
 		//Primer valor para ver su tipo dependiendo de sus lados y el segundo depende de sus ángulos.
 		String tipos[] = new String[2];

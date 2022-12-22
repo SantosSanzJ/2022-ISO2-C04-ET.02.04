@@ -1,11 +1,10 @@
 package comparadorTriangulos;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
 
 class TrianguloTest {
-
 	@Test
 	void testExcepcionAmbosNegativos() {
 		double[] lados = {-10.0,-10.0,-10.0};
@@ -118,6 +117,7 @@ class TrianguloTest {
 		String[] resultado = {"Recto","Isósceles"};
 		assertArrayEquals(resultado,t.devolverTipo());
 	}
+	@Test
 	void testC13(){
 		double[] lados = {10.0,10.0,14.14};
 		double[] angulos = {45.0,45.0,90.0};
