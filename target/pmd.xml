@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.49.0" timestamp="2022-12-23T11:00:49.466">
-<file name="C:\Users\03961465\eclipse-workspace\C04-ISO2-ET02\src\main\java\C04\C04_ISO2_ET02\Triangulo.java">
-<violation beginline="3" endline="3" begincolumn="1" endcolumn="36" rule="UnnecessaryImport" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
-Unused import 'javax.print.event.PrintEvent'
-</violation>
-<violation beginline="155" endline="155" begincolumn="11" endcolumn="106" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.49.0" timestamp="2022-12-23T20:16:34.452">
+<file name="C:\Users\03961465\eclipse-workspace\2022-ISO2-C04-ET.02.04\src\main\java\C04\C04_ISO2_ET02\Triangulo.java">
+<violation beginline="166" endline="166" begincolumn="11" endcolumn="106" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="155" endline="155" begincolumn="12" endcolumn="55" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="166" endline="166" begincolumn="12" endcolumn="55" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="155" endline="155" begincolumn="62" endcolumn="105" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="166" endline="166" begincolumn="62" endcolumn="105" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="156" endline="156" begincolumn="8" endcolumn="103" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="167" endline="167" begincolumn="8" endcolumn="103" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="156" endline="156" begincolumn="9" endcolumn="52" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="167" endline="167" begincolumn="9" endcolumn="52" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="156" endline="156" begincolumn="59" endcolumn="102" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="167" endline="167" begincolumn="59" endcolumn="102" rule="UselessParentheses" ruleset="Code Style" package="C04.C04_ISO2_ET02" class="Triangulo" method="verificarTrianguloTeoremaSeno" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
 </file>

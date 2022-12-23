@@ -18,27 +18,17 @@ public class Triangulo {
 	private double angulos[] = new double[3]; 
 	//this.angulos[1]=Math.trunc(this.angulos[1]);
 
-	/**
-	 * Constructor del objeto "Triangulo" que toma los lados y angulos y determina
-	 * el tipo de triángulo que es.
-	 * @param lados
-	 * @param angulos
-	 * @return Devuelve el objeto "Triangulo"
-	 */
+
 	public Triangulo(double[] lados, double[] angulos){
 		// Para formar un triangulo importan las posiciones por lo que asumiremos:
 		// lados[0] es el lado a, angulos[0] es alfa, lados[1] es el lado b, 
 		// angulos[1] es beta, lados[2] es el lado c, angulos[2] es ganma
-		this.lados = lados;
-		this.angulos = angulos;
+		this.lados = lados.clone();
+		this.angulos = angulos.clone();
 		this.tipos = devolverTipo();
 	}
 	
-	/**
-	 * Metodo que devuelve los tipos de triangulo que es, en función de
-	 * los atributos del objeto.
-	 * @return Devuelve los tipos, o en caso de no ser triangulos validos el si no lo son.
-	 */
+
 	public String[] devolverTipo(){
 		//Primer valor para ver su tipo dependiendo de sus lados y el segundo depende de sus ángulos.
 		String tipos[] = new String[2];
@@ -56,14 +46,10 @@ public class Triangulo {
 		return tipos;	
 	}
 
-	/**
-	 * Metodo que devuelve el tipo de triángulo que es en función de sus lados, usando los
-	 * atributos del objeto.
-	 * @return Devuelve "Equilátero", "Isósceles" y "Escaleno" en función de sus lados
-	 */
+
 	public String clasificarLado(){
 		//Lanzar excepción si la raiz de los catetos al cuadrado es diferente de la hipotenusa.
-		String tipoLado = new String();
+		String tipoLado = "";
 		if(this.lados[0] == this.lados[1] && this.lados[0] == this.lados[2]) {
 			tipoLado = "Equilátero";
 		}else if(this.lados[0] == this.lados[1] || this.lados[0] == this.lados[2] ||
@@ -75,13 +61,9 @@ public class Triangulo {
 		return tipoLado;
 	}
 
-	/**
-	 * Metodo que devuelve el tipo de triángulo que es en función de sus ángulos, usando los
-	 * atributos del objeto. Usa un margen de error para determinarlo.
-	 * @return Devuelve "Obtusángulo", "Recto" o "Acutángulo" en función de sus ángulos
-	 */
+
 	public String clasificarAngulo() {
-		String tipoAngulo = new String();
+		String tipoAngulo = "";
 		double anguloMayor = 0.0;
 
 		for(int i = 0; i < 3; i++) {
@@ -98,11 +80,7 @@ public class Triangulo {
 		return tipoAngulo;
 	}
 
-	/**
-	 * Metodo que determina si es un triángulo posible, verifica si hay lados <=0, si hay ángulos <=0, 
-	 * si los ángulos suman 180º y si cumple o no con el teorema del seno
-	 * @return Devuelve si el triángulo es valido, sino, devuelve el error que ha surgido
-	 */
+
 	public String verificarTriangulo() {
 		double total = 0;
 
@@ -142,12 +120,7 @@ public class Triangulo {
 		return "Triángulo Válido";
 	}
 
-	/**
-	 * Este método revisa que se cumpla el teorema del seno con cierto margen de error para no tener 
-	 * que introducir ángulos exactos. Realiza un redondeo de los ángulos y compara el resultado del
-	 * teorema del seno con el que daría con el seno(anguloRedondeado+-MARGENERROR
-	 * @return Devuelve si el triángulo cumple o no con el teorema del seno
-	 */
+
 	public boolean verificarTrianguloTeoremaSeno() {
 		//El teorema del seno es la mejor forma de verificar si un triángulo es posible o no
 		//Para poder hacerlo usando estimaciones es necesario sacar valores inferiores y superiores
