@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: C04.C04_ISO2_ET02.AppTest
 -------------------------------------------------------------------------------
-Tests run: 125, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec
+Tests run: 125, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 sec
