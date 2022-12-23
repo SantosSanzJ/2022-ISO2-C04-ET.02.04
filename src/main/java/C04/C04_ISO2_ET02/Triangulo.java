@@ -1,7 +1,11 @@
 package C04.C04_ISO2_ET02;
 
-import javax.print.event.PrintEvent;
-
+/**
+ * Es una clase que crea un objeto "Triangulo" que dados unos lados y angulos
+ * determina el tipo de triangulo que es.
+ * @author Javier Santos Sanz y Gonzalo Prieto de la Barreda
+ * @version 1.1
+ */
 public class Triangulo {
 	//Declaramos las variables para evitar los "números mágicos".
 	static final double ANGULOTOTAL = 180.0;
@@ -14,6 +18,13 @@ public class Triangulo {
 	private double angulos[] = new double[3]; 
 	//this.angulos[1]=Math.trunc(this.angulos[1]);
 
+	/**
+	 * Constructor del objeto "Triangulo" que toma los lados y angulos y determina
+	 * el tipo de triángulo que es.
+	 * @param lados
+	 * @param angulos
+	 * @return Devuelve el objeto "Triangulo"
+	 */
 	public Triangulo(double[] lados, double[] angulos){
 		// Para formar un triangulo importan las posiciones por lo que asumiremos:
 		// lados[0] es el lado a, angulos[0] es alfa, lados[1] es el lado b, 
@@ -23,6 +34,11 @@ public class Triangulo {
 		this.tipos = devolverTipo();
 	}
 	
+	/**
+	 * Metodo que devuelve los tipos de triangulo que es, en función de
+	 * los atributos del objeto.
+	 * @return Devuelve los tipos, o en caso de no ser triangulos validos el si no lo son.
+	 */
 	public String[] devolverTipo(){
 		//Primer valor para ver su tipo dependiendo de sus lados y el segundo depende de sus ángulos.
 		String tipos[] = new String[2];
@@ -39,6 +55,12 @@ public class Triangulo {
 
 		return tipos;	
 	}
+
+	/**
+	 * Metodo que devuelve el tipo de triángulo que es en función de sus lados, usando los
+	 * atributos del objeto.
+	 * @return Devuelve "Equilátero", "Isósceles" y "Escaleno" en función de sus lados
+	 */
 	public String clasificarLado(){
 		//Lanzar excepción si la raiz de los catetos al cuadrado es diferente de la hipotenusa.
 		String tipoLado = new String();
@@ -53,6 +75,11 @@ public class Triangulo {
 		return tipoLado;
 	}
 
+	/**
+	 * Metodo que devuelve el tipo de triángulo que es en función de sus ángulos, usando los
+	 * atributos del objeto. Usa un margen de error para determinarlo.
+	 * @return Devuelve "Obtusángulo", "Recto" o "Acutángulo" en función de sus ángulos
+	 */
 	public String clasificarAngulo() {
 		String tipoAngulo = new String();
 		double anguloMayor = 0.0;
@@ -71,6 +98,11 @@ public class Triangulo {
 		return tipoAngulo;
 	}
 
+	/**
+	 * Metodo que determina si es un triángulo posible, verifica si hay lados <=0, si hay ángulos <=0, 
+	 * si los ángulos suman 180º y si cumple o no con el teorema del seno
+	 * @return Devuelve si el triángulo es valido, sino, devuelve el error que ha surgido
+	 */
 	public String verificarTriangulo() {
 		double total = 0;
 
@@ -110,21 +142,27 @@ public class Triangulo {
 		return "Triángulo Válido";
 	}
 
+	/**
+	 * Este método revisa que se cumpla el teorema del seno con cierto margen de error para no tener 
+	 * que introducir ángulos exactos. Realiza un redondeo de los ángulos y compara el resultado del
+	 * teorema del seno con el que daría con el seno(anguloRedondeado+-MARGENERROR
+	 * @return Devuelve si el triángulo cumple o no con el teorema del seno
+	 */
 	public boolean verificarTrianguloTeoremaSeno() {
 		//El teorema del seno es la mejor forma de verificar si un triángulo es posible o no
 		//Para poder hacerlo usando estimaciones es necesario sacar valores inferiores y superiores
 		//y ver si el valor está entre estos. El valor varía mucho en función de la cercanía/lejanía 
 		//con respecto a pi/2 o 90º, por lo que el margen de error en algunas ocasiones es demasiado
 		//y en otras demasiado poco.
-		double angulosTruncados[] = new double[3];
+		double angulosRedondeados[] = new double[3];
 		double constante[] = new double[3];
 		double teoremaSenoExtremos[][] = new double[3][2];
 		boolean valido = true;
 
 		//Primero truncamos el valor de los angulos a 2 decimales que es sobre lo que trabajaremos
 		for (int i = 0; i < 3; i++) {
-			angulosTruncados[i] = Math.round(this.angulos[i]*100);
-			angulosTruncados[i] = angulosTruncados[i]/100;
+			angulosRedondeados[i] = Math.round(this.angulos[i]*100);
+			angulosRedondeados[i] = angulosRedondeados[i]/100;
 		}
 		//Calculamos el teorema del seno correspondiente a cada lado/ángulo
 		for (int i = 0; i < 3; i++) {
@@ -133,20 +171,20 @@ public class Triangulo {
 		//Calculamos los valores extremos para poder estimar, como en 90º está el extremo de la función
 		//el menor/mayor cambiará en función del grado
 		for (int i = 0; i < 3; i++) {
-			if(angulosTruncados[i] >= 90.00) {
-				if ((angulosTruncados[i]-MARGENERROR)<90.00) {
+			if(angulosRedondeados[i] >= 90.00) {
+				if ((angulosRedondeados[i]-MARGENERROR)<90.00) {
 					teoremaSenoExtremos[i][0] = lados[i]-MARGENERROR;
 				}else{
-					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])-MARGENERROR);
+					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosRedondeados[i])-MARGENERROR);
 				}
-				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])+MARGENERROR);
+				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosRedondeados[i])+MARGENERROR);
 			}else{
-				if ((angulosTruncados[i]+MARGENERROR)>90.00) {
+				if ((angulosRedondeados[i]+MARGENERROR)>90.00) {
 					teoremaSenoExtremos[i][0] = lados[i]-MARGENERROR;
 				}else{
-					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])+MARGENERROR);
+					teoremaSenoExtremos[i][0] = this.lados[i]/Math.sin(Math.toRadians(angulosRedondeados[i])+MARGENERROR);
 				}
-				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosTruncados[i])-MARGENERROR);
+				teoremaSenoExtremos[i][1] = this.lados[i]/Math.sin(Math.toRadians(angulosRedondeados[i])-MARGENERROR);
 			}
 		}
 		//Finalmente, se realiza la comparación, en caso de que algún valor no coincida se evaluará en falso
