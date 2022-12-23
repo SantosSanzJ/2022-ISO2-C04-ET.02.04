@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"C04.C04_ISO2_ET02","l":"AnguloInvalidoException"},{"p":"C04.C04_ISO2_ET02","l":"LadoInvalidoException"},{"p":"C04.C04_ISO2_ET02","l":"SumaAnguloInvalidaException"},{"p":"C04.C04_ISO2_ET02","l":"Triangulo"},{"p":"C04.C04_ISO2_ET02","l":"TrianguloImposibleException"}];updateSearchResults();
